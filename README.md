@@ -46,3 +46,22 @@ tailwind-playground/
         ├── pages/
         └── assets/
             └── images/
+
+Atajos rapidos a documentacion oficial: 
+
+1. Crear variables personalizadas:
+- Implementacion: https://tailwindcss.com/docs/theme
+- Lista de variables predeterminadas: https://tailwindcss.com/docs/theme#default-theme-variable-reference
+
+
+
+Importante: cada vez que anbrimos el proyecto nuevamente debemos indicarle a tailwind Importante: npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch mediante la terminal para que lea los estilos, pero una practica recomendada es crear un scripts en package.json para que ejecute automaticamente:
+
+1. Agregar en package.json:
+{
+.... ,
+"scripts": {
+  "build:styles": "tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+}
+}
+2. Ejecutar en bash:  npm run build:styles
